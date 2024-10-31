@@ -112,7 +112,8 @@ export default function Header({ setShowSearchModal }) {
               <Link
                 href={route.path}
                 className={`flex items-center gap-1 ${
-                  route.name !== 'خانه' && pathname.startsWith(route.path)
+                  (route.name === 'خانه' && pathname === '/') ||
+                  (route.name !== 'خانه' && pathname.startsWith(route.path))
                     ? 'text-white'
                     : 'text-MyGray'
                 }`}
