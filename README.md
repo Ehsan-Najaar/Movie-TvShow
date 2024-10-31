@@ -13,12 +13,12 @@
 
 ## اسکرین‌شات‌ها
 
-![اسکرین‌شات 1](https://github.com/user-attachments/assets/2075cec3-4ec1-4e74-9971-80e390669d0e)
-![اسکرین‌شات 2](https://github.com/user-attachments/assets/2f379d49-ae87-41c5-b5d8-d8b9e9c1e227)
-![اسکرین‌شات 3](https://github.com/user-attachments/assets/25f4693c-075e-49e4-8085-ddc687ff9cee)
-![اسکرین‌شات 4](https://github.com/user-attachments/assets/56098473-fa98-4022-9e0c-04737faa370e)
-![اسکرین‌شات 5](https://github.com/user-attachments/assets/86c1c6c9-8d23-4761-806a-284cfa3af34a)
-![اسکرین‌شات 6](https://github.com/user-attachments/assets/4bf0e8bd-8b9b-4320-9e2c-59dbcc0b421f)
+![اسکرین‌شات 1](https://github.com/user-attachments/assets/2075cec3-4ec1-4e74-9971-80e390669d0e)<br><br>
+![اسکرین‌شات 2](https://github.com/user-attachments/assets/2f379d49-ae87-41c5-b5d8-d8b9e9c1e227)<br><br>
+![اسکرین‌شات 3](https://github.com/user-attachments/assets/25f4693c-075e-49e4-8085-ddc687ff9cee)<br><br>
+![اسکرین‌شات 4](https://github.com/user-attachments/assets/56098473-fa98-4022-9e0c-04737faa370e)<br><br>
+![اسکرین‌شات 5](https://github.com/user-attachments/assets/86c1c6c9-8d23-4761-806a-284cfa3af34a)<br><br>
+![اسکرین‌شات 6](https://github.com/user-attachments/assets/4bf0e8bd-8b9b-4320-9e2c-59dbcc0b421f)<br><br>
 ![اسکرین‌شات 7](https://github.com/user-attachments/assets/5f47a1a2-7734-43ef-b33b-0598c7d12016)
 
 ## تکنولوژی‌های مورد استفاده
