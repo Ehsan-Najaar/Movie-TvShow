@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IRANSans font */
+@import '../public/fonts/IRANSans.css';
+
+body {
+  font-family: 'IRANSans';
+}
+
+/* --primary: #87ceeb; */
+:root {
+  --primary: #ff6b6b;
+  --secondary: #010f1d;
+  --MyGray: #6b7280;
+}
+
+.logo-text {
+  width: max-content;
+  font-family: 'YourCustomFont', sans-serif; /* می‌توانید یک فونت خاص انتخاب کنید */
+  font-size: 2.5rem; /* اندازه فونت */
+  font-weight: bold; /* ضخامت فونت */
+  text-transform: uppercase; /* تغییر به حروف بزرگ */
+  background: linear-gradient(90deg, #ff6b6b, #f7e6a0);
+  -webkit-background-clip: text; /* کلاپس پس‌زمینه برای متن */
+  color: transparent; /* متن شفاف */
+  letter-spacing: 0.1rem; /* فاصله بین حروف */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* سایه برای متن */
+}
+
+.circle-gradiant {
+  background: radial-gradient(circle, #041c33, transparent);
+  color: white; /* رنگ متن */
+  border-top-left-radius: 1.5rem; /* تنظیم شعاع گوشه‌ها */
+  border-top-right-radius: 1.5rem; /* تنظیم شعاع گوشه‌ها */
+}
+
+.backdrop {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.innerShadow {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--MyGray);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  outline: none;
+  color: white;
+}
+
+.primary-button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+}
+
+.primary-outline-button {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  background-color: var(--MyGray) !important;
+  transition: background-color 0.3s, opacity 0.3s, width 0.3s !important;
+  display: inline-block !important;
+  margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary) !important;
+  width: 36px !important;
+  border-radius: 14px !important;
+}
+
+.swal-popup {
+  animation: slideIn 0.5s ease forwards, slideOut 0.5s ease forwards 2.5s; /* 0.5s for in, 2.5s for delay before out */
+}
+
+.swal-title {
+  font-size: 14px; /* اندازه متن عنوان را تنظیم کنید */
+}
+
+/* ... سایر انیمیشن‌ها ... */
+
+.swal-progress-bar {
+  background-color: #ffffff; /* تغییر رنگ نوار پیشرفت به سفید */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%); /* شروع از پایین */
+    opacity: 0; /* شفافیت صفر */
+  }
+  to {
+    transform: translateY(0); /* به حالت نرمال برمی‌گردد */
+    opacity: 1; /* شفافیت کامل */
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0); /* از حالت نرمال */
+    opacity: 1; /* شفافیت کامل */
+  }
+  to {
+    transform: translateY(100%); /* به پایین می‌رود */
+    opacity: 0; /* شفافیت صفر */
+  }
+}
+
+/* loader */
+.loader-container {
+  position: fixed; /* برای ثابت نگه‌داشتن در وسط صفحه */
+  top: 50%; /* موقعیت عمودی */
+  left: 50%; /* موقعیت افقی */
+  transform: translate(-50%, -50%); /* مرکزیت */
+  background-color: rgba(0, 0, 0, 0.5); /* پس‌زمینه با 50% شفافیت */
+  z-index: 9999; /* اطمینان از بالاترین z-index */
+  width: 100vw; /* عرض کل صفحه */
+  height: 100vh; /* ارتفاع کل صفحه */
+  display: flex; /* استفاده از Flexbox برای مرکزیت */
+  justify-content: center; /* مرکزیت افقی */
+  align-items: center; /* مرکزیت عمودی */
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+    var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+
+.loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
+  }
+}
+
+/* swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.7) !important; /* رنگ پس‌زمینه */
+  padding: 8px !important; /* فاصله داخلی */
+  color: #fff !important; /* رنگ آیکون */
+  border-radius: 50% !important; /* گرد کردن دکمه */
+  width: 48px !important; /* عرض دکمه */
+  height: 48px !important; /* ارتفاع دکمه */
+  display: flex !important; /* استفاده از فلکس برای مرکز کردن آیکون */
+  align-items: center !important; /* مرکز قرار دادن عمودی */
+  justify-content: center !important; /* مرکز قرار دادن افقی */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important; /* سایه */
+  transition: background-color 0.3s ease, transform 0.3s ease !important; /* انیمیشن برای تغییر رنگ و مقیاس */
+  margin-top: -32px;
+  z-index: 10 !important; /* ترتیب قرارگیری */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important; /* اندازه آیکون */
+  color: #fff !important; /* رنگ آیکون */
+}
