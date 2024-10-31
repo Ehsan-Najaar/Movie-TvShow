@@ -386,13 +386,15 @@ export default function TvShowPage() {
                       <div className="flex items-center gap-4">
                         {review.author_details &&
                         review.author_details.avatar_path ? (
-                          <Image
-                            src={`https://image.tmdb.org/t/p/w45${review.author_details.avatar_path}`}
-                            alt={review.author}
-                            width={45}
-                            height={45}
-                            className="rounded-full"
-                          />
+                          <figure className="overflow-hidden rounded-full">
+                            <Image
+                              src={`https://image.tmdb.org/t/p/w45${review.author_details.avatar_path}`}
+                              alt={review.author}
+                              width={45}
+                              height={45}
+                              className="w-12 h-12"
+                            />
+                          </figure>
                         ) : (
                           <FaUserCircle className="text-gray-400 w-12 h-12" />
                         )}

@@ -170,7 +170,7 @@ export default function MoviePage() {
   return (
     <div
       className={`transition-all duration-1000 lg:mt-16 p-4 lg:p-0 ${
-        isScrolled ? 'lg:mt-28' : 'lg:mt-16'
+        isScrolled ? 'lg:mt-36' : 'lg:mt-16'
       }`}
     >
       <figure className="hidden lg:flex absolute top-28 right-0 w-full h-60 blur -z-10">
@@ -220,7 +220,7 @@ export default function MoviePage() {
           </div>
           <div className="flex flex-col-reverse md:flex-row items-center justify-between">
             <div className="md:w-[70%]">
-              <p className="w-max flex items-center gap-4 my-12 md:mb-24">
+              <p className="w-max flex items-center gap-4 my-12 md:mb-16">
                 <span className="text-xl">ژانر</span>
                 <p className="text-MyGray">{genres}</p>
               </p>
@@ -384,16 +384,18 @@ export default function MoviePage() {
                       key={review.id}
                       className="mb-4 p-6 rounded-lg bg-gray-800 shadow-lg space-y-3 border border-gray-700"
                     >
-                      <div className="flex items-center space-x-3">
+                      <div className="flex items-center gap-4">
                         {review.author_details &&
                         review.author_details.avatar_path ? (
-                          <Image
-                            src={`https://image.tmdb.org/t/p/w45${review.author_details.avatar_path}`}
-                            alt={review.author}
-                            width={45}
-                            height={45}
-                            className="rounded-full"
-                          />
+                          <figure className="overflow-hidden rounded-full">
+                            <Image
+                              src={`https://image.tmdb.org/t/p/w45${review.author_details.avatar_path}`}
+                              alt={review.author}
+                              width={45}
+                              height={45}
+                              className="w-12 h-12"
+                            />
+                          </figure>
                         ) : (
                           <FaUserCircle className="text-gray-400 w-12 h-12" />
                         )}
@@ -419,14 +421,16 @@ export default function MoviePage() {
 
                       <div className="flex items-center justify-between text-gray-400 mt-4">
                         <div className="flex items-center gap-4">
-                          <button className="hover:text-green-400">
+                          <button className="flex items-center gap-2 hover:text-green-400 transition-all duration-150">
                             <FiThumbsUp className="h-6 w-6" />
+                            <span className="ml-1 text-sm">موافق</span>
                           </button>
-                          <button className="hover:text-red-400">
+                          <button className="flex items-center gap-2 hover:text-red-400 transition-all duration-150">
                             <FiThumbsDown className="h-6 w-6" />
+                            <span className="ml-1 text-sm">مخالف</span>
                           </button>
                         </div>
-                        <button className="flex items-center gap-2 text-MyGray text-sm">
+                        <button className="flex items-center gap-2 text-MyGray text-sm hover:text-white transition-all duration-150">
                           پاسخ
                           <FaReply />
                         </button>
