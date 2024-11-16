@@ -5,12 +5,9 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'image.tmdb.org',
-        port: '',
-        pathname: '/t/p/**',
       },
     ],
   },
 }
 
-// Use export default for ES module syntax
 export default nextConfig
