@@ -65,13 +65,13 @@ export default function MoviePage() {
     let url
     switch (tab) {
       case 'actors':
-        url = `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}`
+        url = `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=fa-IR`
         break
       case 'reviews':
-        url = `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}`
+        url = `${BASE_URL}/movie/${movieId}/reviews?api_key=${API_KEY}&language=fa-IR`
         break
       case 'related':
-        url = `${BASE_URL}/movie/${movieId}/similar?api_key=${API_KEY}`
+        url = `${BASE_URL}/movie/${movieId}/similar?api_key=${API_KEY}&language=fa-IR`
         break
       default:
         return

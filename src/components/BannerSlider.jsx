@@ -91,9 +91,6 @@ export default function BannerSlider() {
                     ? 'lg:w-[180%] w-[200%] md:w-[140%] sm:w-[160%] z-20 scale-100 -mr-16 md:-mr-12 lg:-mr-0'
                     : 'w-[80%] scale-[75%]'
                 } mx-auto rounded-3xl overflow-hidden group shadow-lg`}
-                onMouseOver={() => {
-                  console.log(movie)
-                }}
               >
                 <Link
                   href={`/movies/${

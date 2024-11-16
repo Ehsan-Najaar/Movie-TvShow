@@ -11,7 +11,6 @@ export default function Logo() {
         alt=""
         className="cursor-pointer"
       />
-      {/* <p>مووی پلی</p> */}
     </Link>
   )
 }
