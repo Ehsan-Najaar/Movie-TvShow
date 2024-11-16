@@ -474,10 +474,13 @@ export default function MoviePage() {
                           <Image
                             width={170}
                             height={170}
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt={movie.title} // تغییر 'show.name' به 'movie.title'
+                            src={`https://image.tmdb.org/t/p/w500${
+                              movie.poster_path
+                            }?timestamp=${new Date().getTime()}`} // پارامتر زمان اضافه شده
+                            alt={movie.title}
                             className="rounded-2xl object-cover"
                           />
+
                           <div className="space-y-2 p-2">
                             <p className="w-max text-white">
                               {movie.title.length > 15
