@@ -8,14 +8,12 @@ const nextConfig = {
       },
     ],
     unoptimized: true, // غیرفعال کردن بهینه‌سازی تصاویر
-    loader: 'imgix', // اگر نیاز دارید می‌توانید از imgix به عنوان لودر استفاده کنید
     path: 'https://image.tmdb.org/t/p/', // مسیر پیش‌فرض برای تصاویر
   },
-  // تنظیمات مربوط به Cache-Control
   async headers() {
     return [
       {
-        source: '/_next/image', // مسیر درست
+        source: '/_next/image', // مسیر درست برای درخواست‌های تصاویر
         headers: [
           {
             key: 'Cache-Control',
