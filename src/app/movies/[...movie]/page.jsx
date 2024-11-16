@@ -47,10 +47,6 @@ export default function MoviePage() {
   const [tabData, setTabData] = useState(null)
 
   useEffect(() => {
-    console.log('movie poster path ->', movie.poster_path) // مشاهده مسیر تصویر
-  }, [movie])
-
-  useEffect(() => {
     const storedBookmarks = JSON.parse(
       localStorage.getItem('bookmarkedMovies') || '[]'
     )

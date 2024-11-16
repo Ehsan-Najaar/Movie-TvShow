@@ -125,7 +125,11 @@ export default function BannerSlider() {
                           {new Date(movie.release_date).getFullYear()}
                         </h2>
                         <button className="primary-outline-button">
-                          <Link href={`movies/${movie.id}-${movie.title}`}>
+                          <Link
+                            href={`/movies/${
+                              genreTranslations[movie.genre_ids[0]] || 'نامشخص'
+                            }/${movie.id}-${encodeURIComponent(movie.title)}`}
+                          >
                             تماشا / دانلود
                           </Link>
                         </button>
