@@ -14,22 +14,22 @@ import {
 
 const socialLinks = [
   {
-    href: 'https://www.linkedin.com/in/ehsan-najaar-629769307/',
+    href: '#',
     icon: <FaLinkedin />,
     label: 'LinkedIn',
   },
   {
-    href: 'https://github.com/Ehsan-Najaar',
+    href: '#',
     icon: <FaGithub />,
     label: 'GitHub',
   },
   {
-    href: 'https://www.instagram.com/ehsan_najaar/',
+    href: '#',
     icon: <FaInstagram />,
     label: 'Instagram',
   },
   {
-    href: 'https://www.youtube.com/@root-ehsan-najaar',
+    href: '#',
     icon: <FaYoutube />,
     label: 'Youtube',
   },
