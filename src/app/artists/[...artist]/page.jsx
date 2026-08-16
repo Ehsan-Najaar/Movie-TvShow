@@ -1,3 +1,5 @@
+// src/app/artists/[...artist]/
+
 'use client'
 
 import Footer from '@/components/Footer'
